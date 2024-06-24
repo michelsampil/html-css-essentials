@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML and CSS Examples</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Inline CSS -->
+    <h1 style="color: pink">👋 Hello World</h1>
+
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to HTML and CSS Examples</h1>
+      <nav>
+        <ul>
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <section id="section1">
+        <h2>Section 1: Basic Tags</h2>
+        <p>
+          This is a paragraph demonstrating the use of the
+          <strong>strong</strong> and <em>em</em> tags.
+        </p>
+        <p>Here is a list of items:</p>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </section>
+
+      <section id="section2">
+        <h2>Section 2: Media Tags</h2>
+        <p>Image example:</p>
+        <img src="example.jpg" alt="Example Image" />
+        <p>Audio example:</p>
+        <audio controls>
+          <source src="example.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+        <p>Video example:</p>
+        <video controls>
+          <source src="example.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <section id="section3">
+        <h2>Section 3: Form Elements</h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="4" cols="50"></textarea
+          ><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+
+      <!-- Demonstrating various CSS features -->
+      <div class="container">
+        <div class="box">Box with Border Radius</div>
+        <div class="triangle"></div>
+        <div class="circle"></div>
+      </div>
+
+      <p class="heading" id="title">
+        This is a heading with various CSS styles
+      </p>
+      <span>This is an inline element</span>
+      <div>This is a block-level element</div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 HTML and CSS Examples</p>
+    </footer>
+  </body>
+</html>
