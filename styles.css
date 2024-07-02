@@ -75,8 +75,53 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 1em 0;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.container {
+  border: 1px solid black;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+}
+
+/* Border radius */
+.box {
+  border: solid 2px violet;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+  width: fit-content;
+}
+
+/* Box shadow */
+.heading {
+  box-shadow: 5px 5px 10px #888888;
+}
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid violet;
+  border-right: 50px solid transparent;
+}
+
+/* Circle */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+/* Circle */
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: lightskyblue;
 }
