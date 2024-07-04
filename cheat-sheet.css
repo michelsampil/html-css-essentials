@@ -48,7 +48,7 @@ h1 ~ p {
   color: yellow;
 }
 
-/* 📝Specificity determines which CSS rule is applied when multiple rules could apply to the same elements | Specificity is calculated based on the types of selectors used. */
+/* Note: 📝 Specificity determines which CSS rule is applied when multiple rules could apply to the same elements | Specificity is calculated based on the types of selectors used. */
 
 /* Specificity example */
 .heading#title {
@@ -195,7 +195,9 @@ p {
   line-height: 1.5;
 }
 
-⚪️ Creating CSS Links
+⚪️ Using CSS Pseudo-classes
+
+/* Note: 📝 These 👇 are the typical applications of pseudo-classes */
 
 /* unvisited link */ 
 a:link {
@@ -215,6 +217,38 @@ a:hover {
 /* selected link */
 a:active {
   color: green;
+}
+
+⚪️ Using CSS Pseudo-elements
+
+/* Note: 👇 These are common examples of pseudo-elements */
+
+/* After pseudo-element */
+p::after {
+  content: " (Read more)";
+  color: grey;
+}
+
+/* Before pseudo-element */
+p::before {
+  content: "Note: ";
+  color: grey;
+}
+
+/* First letter pseudo-element */
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* First line pseudo-element */
+p::first-line {
+  font-weight: bold;
+}
+
+/* Selection pseudo-element */
+p::selection {
+  background: yellow;
 }
 
 ⚪️ Using CSS Display Property
@@ -264,6 +298,8 @@ div {
 
 /* ⚪️ CSS Media Queries */
 
+/* 👇 Traditional Way */
+
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 767px) {
   /* Styles go here */
@@ -282,4 +318,44 @@ div {
 /* Extra large screens (large desktops) */
 @media only screen and (min-width: 1280px) {
   /* Styles go here */
+}
+
+/* 👇 Using the meta tag to make it easier */
+
+/* <!-- Adding width on the meta tag for responsive design --> */
+/* 👇 The following meta tag must be added inside the <head> tab in the html file */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* ⚪️ CSS Media Queries */
+
+/* Small screens (mobile devices) */
+@media only screen and (max-width: 767px) {
+  /* Styles for small screens go here */
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for medium screens go here */
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* Styles for large screens go here */
+  body {
+    background-color: lightyellow;
+  }
+}
+
+/* Extra large screens (large desktops) */
+@media only screen and (min-width: 1280px) {
+  /* Styles for extra large screens go here */
+  body {
+    background-color: lightcoral;
+  }
 }
