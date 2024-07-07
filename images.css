@@ -1,0 +1,70 @@
+body {
+  background-color: #1c1c1e;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.avatar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 300px; /* Fixed width for all cards */
+  height: 200px; /* Fixed height for all cards */
+  overflow: hidden; /* Ensures overflow is hidden to crop images */
+  position: relative; /* Allows for relative positioning */
+  margin: 10px; /* Optional: Add margin for spacing between cards */
+  border: 1px solid violet; /* Optional: Border for styling */
+  box-shadow: 0 4px 8px rgba(238, 130, 238, 0.8); /* Neon violet shadow with 80% opacity */
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%; /* Fill the card's width */
+  height: 100%; /* Fill the card's height */
+  object-fit: cover; /* Cover the entire card, maintaining aspect ratio */
+  object-position: center; /* Center the image within the card */
+}
+
+.avatar-card {
+  width: 150px; /* Set the fixed width for the avatar */
+  height: 150px; /* Set the fixed height for the avatar */
+  overflow: hidden; /* Hide overflow to ensure the image is cropped */
+  border-radius: 50%; /* Makes the container a circle */
+  position: relative; /* For potential positioning of inner elements */
+  display: flex; /* Centering the image within the container */
+  align-items: center; /* Centering the image within the container */
+  justify-content: center; /* Centering the image within the container */
+  border: 2px solid #fff; /* Optional: Add a border for styling */
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.8); /* Teal neon shadow with 80% opacity */
+}
+
+.avatar-card img {
+  width: 100%; /* Fill the avatar's width */
+  height: 100%; /* Fill the avatar's height */
+  object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+  object-position: center; /* Center the image within the container */
+  border-radius: 50%; /* Ensures the image itself is also a circle */
+}
+
+/* Summary
+
+- Container (.card): Set a fixed width and height,
+hide overflow, and optionally add styling for borders,
+margins, and shadows.
+
+- Image (.card img): Ensure the image fills the card,
+maintains aspect ratio, and is centered and cropped if
+necessary using object-fit and object-position.
+
+- Result: Images of various sizes are uniformly displayed
+in cards of the same size without losing quality,
+maintaining their aspect ratio, and being centered within the card. */

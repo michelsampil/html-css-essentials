@@ -1,0 +1,95 @@
+/* ⚪️ Monospaced Fonts
+
+Monospaced fonts have consistent character widths, which can make it easier to predict and manage overflow issues.
+
+Fixed Width Containers: */
+
+.monospaced-container {
+  font-family: Courier, monospace;
+  white-space: pre-wrap; /* Maintain formatting but allow wrapping */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+  word-break: break-all; /* Force breaking of words */
+}
+
+/* ⚪️ Non-Monospaced Fonts
+  
+  Non-monospaced fonts have varying character widths, which makes it a bit more complex to predict and handle overflow.
+  
+  Responsive Width: */
+
+.non-monospaced-container {
+  font-family: Arial, sans-serif;
+  white-space: normal; /* Allow normal wrapping */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+  word-break: normal; /* Break words normally */
+}
+
+/* ⚪️ General Techniques for Both Font Types */
+
+/* Flexbox: */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+/* Grid Layout: */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /* Adjust columns to fit */
+  gap: 10px;
+}
+
+/* ⚪️ Overflow Handling:
+  
+  Use overflow properties to manage content that exceeds the container. */
+
+.overflow-hidden {
+  overflow: hidden; /* Hide overflow */
+}
+
+.overflow-auto {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Text Ellipsis: */
+
+.text-ellipsis {
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis (...) */
+}
+
+.break-word {
+  white-space: normal;
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+  word-break: break-all; /* Force breaking of words */
+}
+
+/* Media Queries: */
+
+@media (max-width: 600px) {
+  .responsive-container {
+    font-size: smaller; /* Adjust font size */
+    width: 100%; /* Ensure container fits */
+  }
+}
+
+/* Define the custom font */
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/path/to/fonts/MyCustomFont.woff2") format("woff2"),
+    url("/path/to/fonts/MyCustomFont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the custom font */
+.custom-font {
+  font-family: "MyCustomFont", sans-serif;
+}

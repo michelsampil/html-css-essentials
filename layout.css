@@ -1,0 +1,108 @@
+/*👇 General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*👇 Flexbox Layout */
+.flexbox-layout {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+.flexbox-header,
+.flexbox-nav,
+.flexbox-main,
+.flexbox-sidebar,
+.flexbox-footer {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.flexbox-header {
+  background-color: #ffb6c1; /* Light pink */
+}
+
+.flexbox-nav {
+  background-color: #add8e6; /* Light blue */
+}
+
+.flexbox-content {
+  display: flex;
+  flex: 1;
+}
+
+.flexbox-main {
+  background-color: #90ee90; /* Light green */
+  flex: 2;
+}
+
+.flexbox-sidebar {
+  background-color: #ffa07a; /* Light salmon */
+  flex: 1;
+}
+
+.flexbox-footer {
+  background-color: #d3d3d3; /* Light gray */
+}
+
+/*👇 Grid Layout */
+.grid-layout {
+  display: grid;
+  height: 50%;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main sidebar"
+    "footer footer footer";
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 2fr 1fr;
+  background-color: #fff0f5; /* Lavender blush background */
+}
+
+.grid-header,
+.grid-nav,
+.grid-main,
+.grid-sidebar,
+.grid-footer {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.grid-header {
+  background-color: #ffb6c1; /* Light pink */
+  grid-area: header;
+}
+
+.grid-nav {
+  background-color: #add8e6; /* Light blue */
+  grid-area: nav;
+}
+
+.grid-main {
+  background-color: #90ee90; /* Light green */
+  grid-area: main;
+}
+
+.grid-sidebar {
+  background-color: #ffa07a; /* Light salmon */
+  grid-area: sidebar;
+}
+
+.grid-footer {
+  background-color: #d3d3d3; /* Light gray */
+  grid-area: footer;
+}
