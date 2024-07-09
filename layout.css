@@ -72,6 +72,50 @@ html {
   background-color: #fff0f5; /* Lavender blush background */
 }
 
+/* 👆 How it works? 
+
+📝 Notes: 
+
+Grid Container (.grid-layout): display: grid;: Sets up the grid layout.
+height: 50%;: Sets the height of the grid container to 50% of its parent element's height.
+grid-template-areas:: Defines the named areas and their arrangement:
+
+"header header": The header spans both columns in the first row.
+"nav nav": The nav spans both columns in the second row.
+"main sidebar": The main content takes up the first column, and the sidebar takes up the second column in the third row.
+"footer footer": The footer spans both columns in the fourth row.
+
+⚠️ fr: The fr unit in CSS Grid Layout stands for "fraction of the available space" (For Grid System)
+It is a flexible unit that allows you to allocate portions of the available space within a grid container.
+The fr unit is especially useful for creating responsive grid layouts where you want to distribute space
+proportionally among grid items.
+
+grid-template-rows: auto auto 1fr auto;: Defines the heights of the rows:
+The first two rows (auto and auto) will adjust their heights based on their content.
+The third row (1fr) will take up the remaining available space.
+The fourth row (auto) will adjust its height based on its content.
+grid-template-columns: 2fr 1fr;: Defines the widths of the columns:
+The first column (2fr) will take up twice as much space as the second column (1fr). 
+
+AUTO vs FR
+
+⭐️ auto
+
+Behavior: The size of the row or column is determined by the size of its content.
+If the content is small, the row or column will be small; if the content is large, the row or column will expand to fit it.
+
+Usage: Best used when you want the grid tracks to fit tightly around their content.
+
+
+⭐️ 1fr
+
+Behavior: The size of the row or column is a fraction of the remaining available space
+in the grid container. The fr unit stands for "fraction".
+
+Usage: Best used when you want to distribute available space proportionally among grid tracks.
+
+*/
+
 .grid-header,
 .grid-nav,
 .grid-main,
