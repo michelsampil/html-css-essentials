@@ -63,10 +63,10 @@ html {
   display: grid;
   height: 50%;
   grid-template-areas:
-    "header header header"
-    "nav nav nav"
-    "main main sidebar"
-    "footer footer footer";
+    "header header"
+    "nav nav"
+    "main sidebar"
+    "footer footer";
   grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 2fr 1fr;
   background-color: #fff0f5; /* Lavender blush background */
