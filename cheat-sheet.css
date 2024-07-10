@@ -329,7 +329,7 @@ div {
 /* ⚪️ CSS Media Queries */
 
 /* Small screens (mobile devices) */
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   /* Styles for small screens go here */
   body {
     background-color: lightblue;
@@ -337,7 +337,7 @@ div {
 }
 
 /* Medium screens (tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* Styles for medium screens go here */
   body {
     background-color: lightgreen;
@@ -345,7 +345,7 @@ div {
 }
 
 /* Large screens (desktops) */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   /* Styles for large screens go here */
   body {
     background-color: lightyellow;
@@ -353,7 +353,7 @@ div {
 }
 
 /* Extra large screens (large desktops) */
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   /* Styles for extra large screens go here */
   body {
     background-color: lightcoral;
